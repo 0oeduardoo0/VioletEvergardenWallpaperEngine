@@ -1,0 +1,69 @@
+html,body, #character, #character-blur {
+  width:100%;
+  height:100%;
+  margin:0;
+  padding:0;
+  overflow:hidden;
+}
+html {
+  background-image: url('background.png');
+  background-size:100% 100%;
+}
+.falling-leaves {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.leaf-scene {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+.leaf-scene div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: url('leaf.png') no-repeat;
+  background-size: 100%;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-backface-visibility: visible;
+          backface-visibility: visible;
+}
+#backleaves {
+  z-index: 12;
+}
+#backleaves div {
+  width: 10px;
+  height: 10px;
+}
+#frontleaves {
+  z-index: 14;
+}
+#frontleaves div {
+  width: 20px;
+  height: 20px;
+}
+#character {
+  background-image: url('character.png');
+  background-size:100% 100%;
+  z-index: 13;
+  position: absolute;
+}
+#canvas {
+  margin:0;
+  padding:0;
+  position:absolute;
+  left:0;
+  top: 25%;
+  z-index:10;
+  left: 50%;
+  transform: translateX(-50%);
+}
